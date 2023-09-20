@@ -68,7 +68,6 @@ document.querySelector('.check').addEventListener('click', () => {
 });
 
 document.querySelector('.again').addEventListener('click', () => {
-  console.log(1234);
   compyuterNumber = Math.trunc(Math.random() * 20) + 1;
   score = 20;
   document.querySelector('.guess').value = '';
@@ -83,7 +82,6 @@ document.querySelector('.again').addEventListener('click', () => {
 });
 
 document.querySelector('.uzbek').addEventListener('click', () => {
-  // console.log(1323);
   language = 'uzb';
   document.querySelector('.again').textContent = 'Qayta!';
   document.querySelector('.between').textContent = '(1 dan 20 gacha)';
