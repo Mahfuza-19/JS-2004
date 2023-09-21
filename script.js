@@ -40,7 +40,8 @@ function showMessage(message) {
     document.querySelector('.message').textContent = message;
   }
 }
-document.querySelector('.check').addEventListener('click', () => {
+document.querySelector('.check').addEventListener('click', isCheck);
+function isCheck() {
   let guessNumber = Number(document.querySelector('.guess').value);
 
   const NUMBER = document.querySelector('.number');
@@ -65,7 +66,7 @@ document.querySelector('.check').addEventListener('click', () => {
     showMessage('😔 You lost the game');
     document.querySelector('.score').textContent = 0;
   }
-});
+}
 
 document.querySelector('.again').addEventListener('click', () => {
   compyuterNumber = Math.trunc(Math.random() * 20) + 1;
@@ -105,4 +106,9 @@ document.querySelector('.english').addEventListener('click', () => {
   document.querySelector('.label-highscore').innerHTML =
     'HighScore:<span class="highscore"> 0 <span>';
   document.querySelector('.check').textContent = ' check';
+});
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Enter') isCheck();
+  console.log(123);
 });
